@@ -3,7 +3,9 @@ import Home from '../pages/Home'
 import { Outlet, Link } from "react-router-dom";
 
 function clicou(){
-  gtag('event', 'click_about');
+  gtag('event', 'click_about', {
+    'title': 'Um titulo para o parâmetro'
+  });
 }
 
 const Header = () => {
