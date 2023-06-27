@@ -2,6 +2,9 @@ import React from 'react'
 import Home from '../pages/Home'
 import { Outlet, Link } from "react-router-dom";
 
+function clicou(){
+  gtag('event', 'click_about');
+}
 
 const Header = () => {
   return (
@@ -12,8 +15,8 @@ const Header = () => {
         <Link to={`/company`} class="sr-only">Your Company</Link>
       </a>
     </div>
-    <div class="flex lg:flex-1">
-      <a href="#" class="-m-1.5 p-1.5" id='about'>
+    <div class="flex lg:flex-1" id='about'>
+      <a href="#" class="-m-1.5 p-1.5" onClick={clicou}>
         <Link to={`/about`} class="sr-only">About</Link>
       </a>
     </div>
